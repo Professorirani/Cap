@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeFacto — Product Certificate | Karma</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a0a;
+    color: #f0ece4;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 16px;
+  }
+
+  .certificate {
+    max-width: 680px;
+    width: 100%;
+    background: #111111;
+    border: 1px solid #c9a96a;
+    padding: 48px 40px;
+    position: relative;
+  }
+
+  .certificate::before {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border: 1px solid rgba(201, 169, 106, 0.25);
+    pointer-events: none;
+  }
+
+  .brand {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #c9a96a;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #8a7a5a;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+  }
+
+  .title {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    letter-spacing: 6px;
+    color: #f0ece4;
+    margin-bottom: 6px;
+  }
+
+  .collection {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: #c9a96a;
+    margin-bottom: 32px;
+  }
+
+  .cap-image {
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    margin: 0 auto 32px;
+    border-radius: 4px;
+  }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #c9a96a, transparent);
+    margin: 32px 0;
+  }
+
+  .edition-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .edition-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #8a7a5a;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .edition-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: #c9a96a;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .edition-note {
+    font-size: 11px;
+    color: #a89a7a;
+    line-height: 1.5;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 32px;
+  }
+
+  .info-item .label {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    color: #8a7a5a;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .info-item .value {
+    font-size: 14px;
+    color: #f0ece4;
+    font-weight: 400;
+  }
+
+  .info-item .value.mono {
+    font-family: 'Courier New', monospace;
+    color: #c9a96a;
+    letter-spacing: 1px;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(201, 169, 106, 0.2);
+  }
+
+  .footer-text {
+    font-size: 10px;
+    color: #6a5f4a;
+    letter-spacing: 1px;
+    line-height: 1.8;
+  }
+
+  .footer-note {
+    font-size: 10px;
+    color: #8a7a5a;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 520px) {
+    .certificate { padding: 32px 20px; }
+    .brand { font-size: 30px; }
+    .edition-number { font-size: 32px; }
+    .edition-grid { gap: 20px; }
+    .info-grid { grid-template-columns: 1fr; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+  <div class="certificate">
+
+    <div class="brand">DeFacto</div>
+    <div class="subtitle">Product Verification</div>
+
+    <div class="title">PRODUCT CERTIFICATE</div>
+    <div class="collection">KARMA COLLECTION</div>
+
+    <!-- عکس کلاه: فایل cap.png رو کنار index.html بذار -->
+    <img src="cap.png" alt="DeFacto Karma Cap" class="cap-image">
+
+    <div class="divider"></div>
+
+    <div class="edition-grid">
+      <div>
+        <div class="edition-label">Turkey Allocation</div>
+        <div class="edition-number">01 / 06</div>
+        <div class="edition-note">This item is number 1 of 6 units allocated to Turkey.</div>
+      </div>
+      <div>
+        <div class="edition-label">Worldwide Total</div>
+        <div class="edition-number">112 / 500</div>
+        <div class="edition-note">This item is number 112 of 500 units in total worldwide production.</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="label">Product Code</div>
+        <div class="value mono">Z34333AZKR1</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Archive ID</div>
+        <div class="value mono">DF-3433AZ-001</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Product Type</div>
+        <div class="value">Men's Cotton Cap</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Color / Variant</div>
+        <div class="value">Karma</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Fabric</div>
+        <div class="value">100% Cotton</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Size</div>
+        <div class="value">STD</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Country of Origin</div>
+        <div class="value">China</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Issuing Dealer</div>
+        <div class="value">DeFacto Main Store — Istanbul</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Current Owner</div>
+        <div class="value">Doctor</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Purchase Date</div>
+        <div class="value">August 2024</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="footer">
+      <div class="footer-note">Verified Product Record</div>
+      <div class="footer-text">
+        This Product Certificate is issued as a record of the product's<br>
+        identification, specifications and origin.
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
